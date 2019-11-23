@@ -33,3 +33,6 @@ getCSVTable("url",limit);
   getCSVTable("https://sharadcodes.github.io/noob-cms/data/MOCK_DATA.csv", 20);
 </script>
 ```
+
+### LIVE DEMO
+[Live Demo Link](https://sharadcodes.github.io/noob-cms/data.html)
