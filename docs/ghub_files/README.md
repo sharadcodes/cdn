@@ -9,7 +9,7 @@
 **To get array of specifice type of files in the specific folder**
 
 ```js
-ghub_sp_files("github_uname", "repo", "path", "extension");
+ghub_sp_files("github_uname","repo","path","extension");
 ```
 
 **Example**
@@ -23,7 +23,7 @@ ghub_sp_files("sharadcodes","noob-cms", "docs/images", "png")
 **To get array of all the images in the specific folder**
 
 ```js
-ghub_all_files(github_uname, repo, path);
+ghub_all_files("github_uname","repo","path");
 ```
 
 **Example**
