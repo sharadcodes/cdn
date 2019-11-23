@@ -1,8 +1,9 @@
 # Github Repo Files Extractor
 
 >Works on master repo only
-
-<scrpt src="https://sharadcodes.github.io/cdn/ghub_files/ghub_files_v1.js"></script>
+```html
+<script src="https://sharadcodes.github.io/cdn/ghub_files/ghub_files_v1.js"></script>
+```
 
 ## How to use the functions:
 
