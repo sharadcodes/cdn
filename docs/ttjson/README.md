@@ -11,6 +11,12 @@ TableToJson is a JavaScript class that converts HTML tables into JSON format. It
 
 ## Usage
 
+To use TableToJson, you need to include the script in your HTML file:
+
+```html
+<script src="https://sharadcodes.github.io/cdn/ttjson/ttjson_v1_min.js"></script>
+```
+
 First, you need to create an instance of the `TableToJson` class, passing the HTML table element as an argument:
 
 ```javascript
