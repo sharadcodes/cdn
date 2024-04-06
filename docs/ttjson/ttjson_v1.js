@@ -81,5 +81,3 @@ class TableToJson {
     return columnName;
   }
 }
-
-// export default TableToJson;
