@@ -24,13 +24,23 @@ SOFTWARE.
 
 class TableToJson {
   constructor(table) {
+    if (!table || !(table instanceof HTMLTableElement)) {
+      throw new Error('Invalid table element');
+    }
     this.table = table;
-    this.details = this.convert();
   }
 
   convert() {
+    if (!this.table.tHead || !this.table.tBodies.length) {
+      throw new Error('Table must have a thead and tbody');
+    }
+
     const headers = this.getTableHeaders();
     const rows = this.getTableRows();
+
+    if (rows.some(row => row.length !== headers.length)) {
+      throw new Error('All rows must have the same number of cells as the headers');
+    }
 
     const json = rows.map((row) => {
       const rowData = {};
@@ -53,14 +63,14 @@ class TableToJson {
   }
 
   getTableHeaders() {
-    const headerRow = this.table.querySelectorAll("thead tr th");
+    const headerRow = this.table.tHead.rows[0].cells;
     return Array.from(headerRow).map((header) => header.innerText);
   }
 
   getTableRows() {
-    const tableRows = this.table.querySelectorAll("tbody tr");
-    return Array.from(tableRows).map((row) =>
-      Array.from(row.querySelectorAll("td")).map((cell) => cell.innerText)
+    const tableRows = Array.from(this.table.tBodies[0].rows);
+    return tableRows.map((row) =>
+      Array.from(row.cells).map((cell) => cell.innerText)
     );
   }
 
