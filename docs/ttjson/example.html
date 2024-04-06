@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TableToJson v1 example</title>
     <script src="./ttjson_v1.js"></script>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
   </head>
   <body>
     <table>
@@ -33,7 +45,6 @@
         </tr>
       </tbody>
     </table>
-
     <script>
       const table = document.querySelector("table");
       const json = new TableToJson(table);
@@ -49,17 +60,5 @@
         console.log(json.convert());
       }, 2000);
     </script>
-    <style>
-      table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-      th,
-      td {
-        border: 1px solid #000;
-        padding: 8px;
-        text-align: left;
-      }
-    </style>
   </body>
 </html>
