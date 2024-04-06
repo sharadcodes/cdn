@@ -9,6 +9,12 @@ TableToJson is a JavaScript class that converts HTML tables into JSON format. It
 - Provides the count of headers and rows
 - Provides the row data both with and without headers
 
+## Example
+
+Check out the following example to see how TableToJson can be used:
+
+[Live Example](https://sharadcodes.github.io/cdn/ttjson/example.html)
+
 ## Usage
 
 To use TableToJson, you need to include the script in your HTML file:
