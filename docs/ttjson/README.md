@@ -24,13 +24,13 @@ const tableElement = document.querySelector('table');
 const tableToJson = new TableToJson(tableElement);
 ```
 
-Then, you can access the converted data through the details property:
+Then, you can access the converted data through the `convert` method:
 
 ```javascript
-console.log(tableToJson.details);
+const data = tableToJson.convert();
 ```
 
-The `details` property contains the following information:
+The `convert` method returns an object with the following properties:
 
 ```javascript
 {
