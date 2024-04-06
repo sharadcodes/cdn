@@ -32,7 +32,7 @@ console.log(tableToJson.details);
 
 The `details` property contains the following information:
 
-```js
+```javascript
 {
   headers: Array, // An array of table headers
   headersCount: Number, // The count of table headers
